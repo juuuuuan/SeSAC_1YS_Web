@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {width: 100px; height: 100px; background-color: yellow;}
+        div:hover { cursor: pointer; background-color:blue;}
+        a {color:black;}
+        p:active {color:red;}
+        input:focus {background: blue;}
+        a:link{color: orange;}
+        a:visited{color: green;}
+        .fruits span:first-child{
+            color: red;
+        }
+        
+        .fruits h3:last-child{
+            color:red;
+        }
+        .fruits *:nth-child(2){
+            color:red;
+        }
+        .fruits *:not(span){
+            color:green;
+        }
+
+        /* div span:nth-child(3){color:red;}
+        div div:first-child{color:blue;}
+        div h2:last-child{color:yellow;}
+        div span:last-child{color:green;} -----------참고사항*/
+    </style>
+</head>
+<body>
+    <div></div>
+    <a href="http://naver.com">a태그1</a>
+    <a href="http://google.com">a태그2</a>
+    <p>p태그</p>
+    <input type="text">
+
+    <div class="fruits">
+        <span>딸기</span>
+        <span>수박</span>
+        <div>오렌지</div>
+        <p>망고</p>
+        <h3>사과</h3>
+    </div>
+
+    <!-- <div>
+        <span>-1</span>
+        <div>0</div>
+        <span>1</span>
+        <span>2</span>
+        <h2></h2>
+    </div> -----------참고사항------------------>
+</body>
+</html>

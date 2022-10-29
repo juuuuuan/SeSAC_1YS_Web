@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #div2 {background-color: yellow;}
+        #div2 .apple {color:green;}
+        #div2 > .apple{text-decoration: underline;}
+        .apple + p {background-color: pink;}
+        .b + span {color: red;}
+        .b ~ span {cololr:blue;}
+    </style>
+</head>
+<body>
+    <div>
+        <span class="b">-1</span>
+        <span>0</span>
+        <span>1</span>
+        <span class="b">2</span>
+        <span>3</span>
+        <span>4</span>
+        <strong>5</strong>
+        <span>6</span>
+    </div>
+    <div>
+        <div id="div2">
+            <p class="apple">1</p>
+            <p class="apple">2</p>
+            <div>
+                <p class="apple">3</p>
+            </div>
+        </div>
+        <p class="apple">5</p>
+        <p>6</p>
+    </div>
+</body>
+</html>
