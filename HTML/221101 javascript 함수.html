@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // function sesac(){
+        //     console.log("sesac hi!");
+        // }
+        // sesac();
+
+        // function sesac2(abc, test, a){
+        //     alert(abc + " " + a + "hello");
+        // }
+        // sesac2("홍길동", "", "13");
+        // sesac2("용산");
+
+        function init() {
+            console.log("init");
+        }
+        function parameter1(a) {
+            console.log(a);
+        }
+        function parameter2() {
+            console.log(a + " " + b);
+        }
+        function parameter3(a, b, c) {
+            console.log("a : " + a);
+            console.log("b : " + b);
+            console.log("c: " + c);
+        }
+
+        init(); // 기본 형태 실행
+        parameter1(); //parameter을 받음에도 전달하지 않기
+        parameter1(10); //parameter 1개 전달
+        parameter2(5, 3);
+        parameter3(1, 2, 3);
+        var variable = "hi";
+        parameter3(variable, variable, variable);
+        parameter3(variable, variable);
+        parameter3(variable);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
