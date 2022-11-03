@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var cat = {
+            name: '나비',
+            age: 1,
+            mew: function(){
+                return "야옹";
+            }
+        }
+        console.log(cat);
+        console.log(cat.name);
+        console.log(cat.mew());
+
+        //return이란??
+        function hello(){
+            return "안녕";
+        }
+        function hi(){
+            console.log("hi");
+        }
+        console.log(hi());
+        var a = hello();
+        console.log(a);
+
+        //배열
+        var arr1 = [1,2,3,'a','b','c'];
+        var arr2 = new Array(1,2,3,'a','b','c');
+        console.log(arr1)
+        console.log(arr1[0]); //arr1의 0번째 인덱스를 가져와라 : 1
+        console.log(arr1.indexOf('a')); // 내가 지금 보내는 이 요소가 몇번째 인덱스에 위치하고 있는지 알려줌 : 3
+        console.log("length : " + arr1.length); // 6
+
+        arr1.push('d'); // 가장 마지막에 요소 추가
+        console.log(arr1);
+
+        arr1.pop(); //가장 마지막 요소 제거
+        console.log(arr1);
+
+        console.log(arr1[2]);
+        arr1.unshift('0'); // 가장 앞의 요소 추가
+        console.log(arr1[2]);
+        console.log(arr1);
+
+        arr1.shift(); // 가장 앞의 요소 제거
+        console.log(arr1[2]);
+        console.log(arr1);
+        //unshift, shift 함수는 가장 앞 요소를 건들이기 때문에, 인덱스 값이 달라진다는 것을 주의
+
+        //딕셔너리
+        var me = {
+            name: '이주안',
+            birth: '0228'
+        };
+        console.log(me);
+        console.log(me["name"]);
+        console.log(me.name);
+
+        me.gender = 'F'
+        me["age"] = 28;
+        console.log(me); // 객체에서는 점과 대괄호로 값을 가져올 수 있다.
+
+        //정리
+        var ar = [1, 2];
+        //배열에서 값을 가져올 때는 index를 기반으로 가져온다.
+        console.log(ar[0]);
+
+        //date 객체
+        console.log("----------------------");
+        var date = new Date();
+        console.log(date);
+        //date 객체 함수
+        console.log(date.getYear()); // 2000년대와 1900년대를 구분하기 위해, 1 사용. ex)122 = 2022 / 22 = 1922
+        console.log(date.getMonth());
+        console.log(date.getDate());
+        console.log(date.getDay()); // 요일. 일요일=1(인덱스:0)....목=5(인덱스:4)
+        console.log(date.getTime()); // 객체는 모두 ms 밀리세컨 단위로 나타냄
+        console.log(date.getHours());
+
+        //math 객체
+        console.log("----------------------");
+        console.log(Math.min()); //전달받은 값 중, 최소값 반환
+        console.log(Math.min(-10, 2, 10)); // -10
+        console.log(Math.min(0, 'a', 5)); // 비교할 수 없는 값들이 들어있는 경우, none값 반환
+
+        console.log(Math.max(-10, 2, 10)); //전달받은 값 중, 최대값 반환 10
+
+        console.log(Math.random()); // 0~1 사이의 무작위 숫자 반환
+        var min =1; var max =10; // 내가 정한 숫자로 무작위 숫자 및 최대 최소값으로 계산하기
+        console.log(Math.random() * (max-min) + min); 
+
+        console.log(Math.round(1.2));// : 1 /소수점 첫번째 자리에서 반올림. 기본적으로 정수로 반환.
+        console.log(Math.round(-1.7)); // : -2
+
+        console.log(Math.floor(1.9));// 내림. 기본적으로 정수로 반환. : 1
+        console.log(Math.ceil(1.1));// 올림. 기본적으로 정수로 반환. : 2
+
+    </script>
+<body>
+    
+</body>
+</html>

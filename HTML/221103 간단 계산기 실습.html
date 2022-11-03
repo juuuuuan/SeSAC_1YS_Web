@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function cal(){
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var op = document.getElementById("op").value;
+            var res;
+
+            if(op == "+"){
+                res = num1+num2;
+            }else if(op == "-"){
+                res = num1-num2;
+            }else if(op == "*"){
+                res = num1*num2;
+            }else if(op == "/"){
+                res = num1/num2;
+            }
+            document.getElementById("res").value = res;
+        }
+
+        function reset(){
+            document.getElementById("num1").value ="";
+            document.getElementById("num2").value ="";
+            document.getElementById("op").value ="";
+            document.getElementById("res").value ="";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        값1 : <input type="text" id="num1">
+    </div>
+    <div>
+        값2 : <input type="text" id="num2">
+    </div>
+    <div>
+        연산자 : <input type="text" id="op">
+    </div>
+    <div>
+        결과 : <input type="text" id="res">
+    </div>
+    <br>
+    <input type="button" value="계산하기" onclick="cal()">
+    <input type="button" value="초기화" onclick="reset()">
+</body>
+</html>

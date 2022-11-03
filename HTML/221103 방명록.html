@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function add(){
+            var table1 = document.getElementById("insertTable");
+            var tr = document.createElement("tr");
+            
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+            
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            tabe1.firstChild.appendChild(tr);
+        }
+    </script>
+    
+</head>
+<body>
+    <p>방명록입니다.</p>
+
+
+    <div>
+        작성자 <input type="text" id="name">
+    </div>
+    <div>
+        내용 <input type="text" id="content">
+    </div>
+    <br>
+    <input type="button" value="작성" onclick="add()">
+    
+    <table border="1" cellpadding="10" cellspacing="0" id="insertTable">
+        <tr style="text-align: center;">
+            <th>번호</th>
+            <th>작성자</th>
+            <th>내용</th>
+            <th>작성일</th>
+        </tr>
+        <tr style="text-align: center;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+    </table>
+</body>
+</html>
