@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        .class {
+            background-color: pink;
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+        function addClass() {
+            $("div").addClass("class"); //class 추가
+        }
+        function removeClass() {
+            $("div").removeClass("class"); //class 제거
+        }
+        function hasClass() {
+            console.log($("div".hasClass("class"))); //지금 class를 가지고 있는지 없는지 확인
+        }
+        function toggleClass() {
+            $("div").toggleClass("class"); //있으면 추가, 없으면 제거
+        }
+    </script>
+</head>
+<body>
+    <div>
+        div입니다.
+    </div>
+    <button type="button" onclick="addClass()">addClass</button>
+    <button type="button" onclick="removeClass()">removeClass</button>
+    <button type="button" onclick="hasClass()">hasClass</button>
+    <button type="button" onclick="toggleClass()">toggleClass</button>
+</body>
+</html>
