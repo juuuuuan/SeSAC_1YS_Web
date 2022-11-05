@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <!-- grid -->
+    <div class="row">
+        <div class="col bg-warning">1</div>
+        <div class="col bg-primary">2</div>
+        <div class="col bg-success">3</div>
+    </div>
+
+    <div class="row">
+        <div class="col bg-warning">1</div>
+        <div class="col bg-primary">2</div>
+        <div class="col bg-success">3</div>
+        <div class="col bg-secondary">3</div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-2 bg-warning">1</div>
+        <div class="col-6 bg-primary">2</div>
+        <div class="col-4 bg-success">3</div>
+        <!-- 만약, 가로가 최대 허용 범위 12개 넘으면 밑으로 넘어감. -->
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-8 col-md-4 col-lg-10 bg-warning">1</div>
+        <div class="col-4  col-md-8 col-lg-2 bg-primary">2</div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <img src="./dolphin.jpg" class="w-100">
+        </div>
+        <div class="col-12 col-sm-6 col-lg-8">
+            <p class="bg-secondary">이 이미지는 돌고래입니다.</p>
+        </div>
+    </div>
+
+
+
+    <!-- display property -->
+    <div class="d-none d-md-block d-lg-none bg-warning" style="height: 300px;">
+        div
+    </div>
+
+    <!-- flex -->
+    <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" style="margin-top: 100px;">Primary button</button>
+        <button type="button" class="btn btn-secondary" >Button</button>
+        <button type="button" class="btn btn-outline-primary" >Primary button</button>
+        <button type="button" class="btn btn-outline-secondary" >Button</button>
+    </div>
+
+    <!-- buttons -->
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <!-- carousel -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./dolphin.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./잔디.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./coffee.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </body>
+</html>
