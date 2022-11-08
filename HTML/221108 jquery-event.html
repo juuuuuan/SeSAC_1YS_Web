@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    body 태그
+    <input type="text" id="input1">
+    <div style="width: 100px; height:100px; background-color: yellow;" id="div1"></div>
+    <script>
+        // 키보드 이벤트
+        $("#input1").keydown(function(e){
+            // console.log("keydown : ", e.currentTarget.value);
+            $("#alert").text("글자가 입력됨, " + e.currentTarget.value);
+            console.log("input keydown");
+            console.log(e);
+            //keydown이라는 이벤트를 발생시킬 때, 누르는 키코드를 작성
+            if (e.keyCode == 13) {
+                console.log("enter key");
+            }
+        });
+        $("#input1").keyup(function(e){
+            // console.log("keyup : ", e.currentTarget.value);
+            console.log("input keyup");
+        });
+        // //keypress 2021년 기준 없어짐.
+        // $("#input1").keypress(function(e){
+        //     // console.log("keypress : ", e.currentTarget.value);
+        //     console.log("input keypress");
+        // }); // keydown vs keypress : down이 먼저 실행된다.
+
+        // 마우스 이벤트
+        //클릭
+        $("#div1").click(function(){
+            console.log("div click");
+        });
+        //마우스오버 : 선택한 요소만 감지 
+        $("#div1").mouseover(function(){
+            console.log("div mouseover");
+        });
+        //호버 : 함수 2개 실행시킬 수 있음. 마우스 올렸을 때, 아닐 때
+        $("#div1").hover(function(){
+            console.log("div hover");
+        }, function(){
+            console.log("div hover2");
+        });
+        //
+        $(window).scroll(function(){
+            console.log("window scroll");
+        });
+
+        // 로딩이벤트
+        // $(document).ready(function(){
+        //     alert("document.ready");
+        // });
+        // $(function(){
+        //     alert("ready")
+        // });
+    </script>
+</body>
+</html>
