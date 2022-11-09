@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
+    날짜 : <input type="text" id="date">
+    <br>
+    내용 : <input type="text" id="content">
+    <br>
+    <input type="button" value="작성" onclick="add()">
+
+    <script>
+        $("td").on("click", function(){
+            console.log(this);
+            console.log($(this).text());
+        })
+    </script>
+
     <h2 style="color:olive; text-align: center; width: 300px;">2019년 6월</h2>
     <table border="0" cellpadding="10" cellspacing="0">
         <tr>
