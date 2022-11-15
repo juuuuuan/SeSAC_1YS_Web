@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <input type="text">
+  <script>
+    // input 요소 노드 객체를 선택
+    const $input = document.querySelector('input');
+
+    // input 요소 노드 객체의 프로토타입 체인
+    console.log(
+        Object.getPrototypeOf($input) === HTMLInputElement.prototype,
+        Object.getPrototypeOf(HTMLInputElement.prototype) === HTMLElement.prototype,
+        Object.getPrototypeOf(HTMLElement.prototype) === Element.prototype,
+        Object.getPrototypeOf(Element.prototype) === Node.prototype,
+        Object.getPrototypeOf(EventTarget.prototype) === Object.prototype
+    ); // 모두 true
+
+    // <input 요소 노드 객체의 특성 & 프로토타입을 제공하는 객체>
+    // 객체 -> Object
+    // 이벤트를 발생시키는 객체 -> EventTarget
+    // 트리 자료구조의 노드 객체 -> Node
+    // 브라우저가 렌더링할 수 있는 웹 문서의 요소(HTML, XML, SVG)를 표현하는 객체 -> Element
+    // 웹 문서의 요소 중에서 HTML 요소를 표현하는 객체 -> HTMLElement
+    // HTML 요소 중에서 input 요소를 표현하는 객체 -> HTMLInputElement
+  </script> 
+
+  
+</body>
+</html>
