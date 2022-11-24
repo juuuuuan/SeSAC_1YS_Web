@@ -63,7 +63,7 @@ app.post('/postForm', (req, res)=>{
 
 app.get('/getForm', (req, res)=>{
     console.log(req.query);
-    res.render("practice_get", {data: req.body});
+    res.render("practice_get", {});
     
 })
 
