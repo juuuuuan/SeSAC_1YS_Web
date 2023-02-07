@@ -48,3 +48,37 @@ app.use(session({
     // },
     // secure: // true일 경우, 보안서버에서만 작동
 }))
+
+const user = {id: "a", pw: "1"};
+
+app.get("/", (req, res)=>{
+    console.log(req.session.user);
+    if(req.session.user) res.render("index", {isLogin: true, id: req.session.user});
+    else res.render("index", {isLogin: false});
+})
+
+app.get("/login", (req, res)=>{
+    res.render("login");
+})
+
+app.post("/login", (req, res)=>{
+    if(req.body.id == uwer.id && req.body.pw == user.pw){
+        req.session.user = req.body.id;
+        res.send(true);
+    } else {
+        res.send(false);
+    }
+    req.body
+})
+
+app.get("/logout", (req, res)=>{
+    req.session.destroy(function(err){
+        if(err) throw err;
+
+        res.redirect("/");
+    })
+})
+
+app.listen(port, ()=>{
+    console.log("server open", port);
+})
